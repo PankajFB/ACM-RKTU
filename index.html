@@ -1,0 +1,298 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+    @import url(https://fonts.googleapis.com/css?family=Inconsolata);
+   
+
+
+
+
+body{
+  height: 100vh;
+  background: #ff00cc;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #333399, #ff00cc);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #333399, #ff00cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  
+
+
+}
+
+.cards-container{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+.card{
+  width: 454px;
+  height: 549px;
+  /* margin-bottom: 20vh; */
+  border-radius: 10px;
+  margin: 100px;
+  backdrop-filter: blur(px);
+  background-color: rgba(255,255,255, 0.35);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 40px 5px;
+  border: 2px rgba(255,255,255,0.4) solid;
+  border-bottom: 1px rgba(40,40,40,0.5) solid;
+  border-right: 1px rgba(255,255,255,0.25) solid;
+  transition: transform 1s ;
+  overflow: hidden;
+}
+
+.card2{
+  width: 300px;
+  height: 370px;
+  border-radius: 10px;
+  margin: 20px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255,255,255, 0.35);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 40px 5px;
+  border: 2px rgba(255,255,255,0.4) solid;
+  border-bottom: 1px rgba(40,40,40,0.5) solid;
+  border-right: 1px rgba(255,255,255,0.25) solid;
+  transition: transform 1s ;
+}
+.card:hover{
+
+  transform: scale(1.1);
+  z-index: 10;
+}
+
+.profile{
+  width: 100%;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1.2px;
+  color: white;
+  line-height: 0.1;
+  text-align: center;
+   font-size: 1rem;
+}
+/* .learn-more{
+  padding-top: 15px;
+  text-align: center;
+  
+}
+.learn-more button{
+  width: 50%;
+  font-size: 1em;
+  background-color: transparent;
+  border: 2px solid white;
+  font-family: 'Oswald', sans-serif;
+  cursor: pointer;
+}
+.more-info{
+  overflow: hidden;
+  height: 0;
+  transition: height .5s ease-in;
+  position:relative;
+}
+
+.learn-more button:focus .more-info{
+  height: 300px;
+}
+
+ */
+.learn-more{
+  color: black;
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  margin: 0 60px;
+  cursor: pointer;
+  background-color: white;
+}
+
+
+.card img{
+  width: 60px;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 20px -6px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(3.6px);
+  -webkit-backdrop-filter: blur(3.6px);
+}
+.bottom{
+  position: relative;
+  top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.socials{
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.socials img{
+  width: 30px;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 2px -6px;
+  transition: transform .5s;
+}
+
+.socials img:hover{
+  cursor: pointer;
+  transform: scale(1.2) translateY(-15px);
+  background-color: white;
+}
+
+.hero-section {
+		display: flex;
+        margin: 5vw;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: row-reverse;
+	}
+	.hero-section img {
+		width: 40%;
+	}
+	.hero-text {
+		width: 54%;
+        margin: 5vw;
+		text-align: left;
+	}
+	.btn {
+		margin: 35px 0;
+	}
+    .circle{
+    position:absolute;
+    width:300px;
+    height:300px;
+    background: rgb(255,212,35);
+  background: linear-gradient(90deg, rgba(255,212,35,1) 0%, rgba(22,194,254,1) 100%);
+    border-radius:50%;
+    left:20%;
+    top:20%;
+    z-index:-1;
+    animation: bounce-in-top 1.1s both;
+  }
+  .second{
+    top:unset;
+    right:30%;
+    bottom:20%;
+    left:unset;
+    background: rgb(49,35,255);
+  background: linear-gradient(90deg, rgba(49,35,255,1) 0%, rgba(251,22,254,1) 100%);
+    width:250px;
+    height:250px;
+     animation: bounce-in-top 1.1s 0.2s both;
+  }
+ 
+
+h1 {
+	font-size: 64px;
+    font-family: 'Inconsolata';
+	line-height: 75px;
+	margin: 15px 0;
+}
+
+p {
+	font-size: 48px;
+	margin-bottom: 15px;
+    font-family: 'Inconsolata';
+}
+
+h3 {
+	font-size: 36px;
+}
+ul {
+	padding-left: 0;
+	padding: 30px 0;
+}
+ul li {
+	/* list-style-type: none; */
+	padding: 20px 0;
+}
+
+.navbar-logo{
+    padding-left:10%;
+    font-family: 'Inconsolata';
+    font-size:30px;
+    font-weight:bold;
+    text-decoration:none;
+    color:#fff; 
+  }
+  .navigation{
+    padding-top:30px;
+    padding-bottom:30px;
+    position:absolute;
+    top:0;
+    width:100%;
+    z-index:1;
+  }
+  .navbar-right{
+    float:right;
+    padding-right:10%;
+  }
+
+  .navbar-right a{
+    text-decoration:none;
+    padding:10px;
+    color: #fff;
+    font-family: 'Inconsolata';
+    font-weight:900;
+  }
+  
+  .navbar-right a:hover{
+    text-decoration:underline;
+  }
+  .navbar-logo{
+    padding-left:10%;
+    font-family: 'Inconsolata';
+    font-size:30px;
+    font-weight:bold;
+    text-decoration:none;
+    color:#fff; 
+  }
+
+  .blur{
+      filter: blur(10px);
+  }
+
+  
+
+.amc{
+    box-shadow: inset 10px 10px 40px 40px #07dbeb;
+    border:2px solid hsla(0, 0%, 100%, 0.3);
+    backdrop-filter:blur(8px);
+    border-radius:5px;
+    /* box-shadow: 12px 12px 2px 1px rgba(15, 15, 218, 0.2); */
+}
+</style>
+<body>
+    <div class="blur circle" ></div>
+    <div class="circle blur second" ></div>
+
+    <nav class="navigation">
+        <a href="#" class="navbar-logo">Logo</a>
+        <div class="navbar-right">
+          <a href="#">About</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact</a>
+        </div>
+      </nav>
+
+    <div class=" content-section-container text-centered bp-100 hero-section">
+        <img class="amc" src="/winners.jpg">
+
+        <div class="hero-text">
+            <h1>Join our community to stay connected</h1>
+           <hp>1947 and is the world's largesst scientific and educational computing socirty. It is a not-for-profit professionla membership group. Its membership is more then 100,000 as of 2020. Its headquaters are in New York City. The association for Computing Machinery (AMC)</p>
+            <a class="btn btn-primary" href="#">Join Now</a>
+        </div>
+    </div>
+    
+  </body>
